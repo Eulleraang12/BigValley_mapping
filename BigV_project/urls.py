@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from BigV_app_map.views import home
+from BigV_app_map.views import home,formulario,sobre_map,vertentes_map
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home,name = 'url_home'),
+    path('formulario/', formulario,name = 'url_formulario'),
+    path('sobre_map/', sobre_map,name = 'url_sobre_map'),
+    path('vertentes_map/', vertentes_map,name = 'url_vertente_map')
 
 ]
