@@ -6,22 +6,22 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>
-        BIG VALLEY Formulario
-     </h1>
-     <div>
-        <form method="POST">
-            {% csrf_token %} 
+    <center> 
+            <h1>       BIG VALLEY Formulario    </h1>
 
-            {{ form }}
+            <form method="POST">
+                {% csrf_token %} 
+                <h2> Dados Cadastrais </h2>
+                   {{Dados.as_p}}
 
-            <button type="submit"> Salvar </button>
-        </form>
-     </div>
+                <h2> Endereço </h2>
+                    {{Endereco.as_p}}
 
-     <div>
-         <a href="/"> retornar </a> 
-    </div>
+                <button type="submit"> Salvar </button>
+                <button><a href="/"> retornar </a> </button>
+            </form>
+
+    </center>
 
 </body>
 </html>

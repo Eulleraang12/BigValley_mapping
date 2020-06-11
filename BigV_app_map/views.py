@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from BigV_app_map.models import Dados_Mapeamento,Endereco
-from BigV_app_map.forms import TransacaoForm
-# import datetime 
+from BigV_app_map.models import Dados_Mapeamento, Endereco
+from BigV_app_map.forms import TransacaoForm_Dados, TransacaoForm_Endereco
+
 
 # Create your views here.
 
@@ -19,22 +19,21 @@ def vertentes_map(request):
     return  render(request, 'env_BigV/vertentes_map.html')
 
 
+
 def formulario(request):
     data = {}
-    form = TransacaoForm()
 
-    # data['dados'] = Dados_Mapeamento.objects.all()
-    return  render(request, 'env_BigV/formulario.html', data)
-
-
-def validacao_form(request):
-    data = {}
-    form = TransacaoForm(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        return redirect("url_home")
+    form_dados = TransacaoForm_Dados(request.POST or None)
     
-    data['form'] = form
+
+    form_endereco = TransacaoForm_Endereco(request.POST or None)
+    
+    if form_dados.is_valid() and form_endereco.is_valid():
+        form_dados.save()
+        form_endereco.save()
+        return redirect("url_home")
+
+    data['Dados'] = form_dados
+    data['Endereco'] = form_endereco
     return render(request, 'env_BigV/formulario.html', data)
 

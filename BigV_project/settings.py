@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BigV_app_map',
+    'localflavor',
 ]
 
 MIDDLEWARE = [
