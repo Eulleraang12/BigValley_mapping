@@ -10,15 +10,50 @@
             <h1>       BIG VALLEY Formulario    </h1>
 
             <form method="POST">
-                {% csrf_token %} 
-                <h2> Dados Cadastrais </h2>
-                   {{Dados.as_p}}
+                <div>
+                    {% csrf_token %} 
+                
+                    <h2> Dados Cadastrais </h2>
 
-                <h2> Endereço </h2>
-                    {{Endereco.as_p}}
+                        Nome: {{Dados.nome}}<br/>
+                        <br/>
+                        Site: {{Dados.site}}<br/>
+                        <br/>
+                        Email: {{Dados.email}}<br/>
+                        <br/>
+                        CNPJ: {{Dados.cnpj}}<br/>
+                        <br/>
+                
+                
+                    <h2> Endereço </h2>
 
-                <button type="submit"> Salvar </button>
-                <button><a href="/"> retornar </a> </button>
+                        CEP:    {{Dados.cep}}<br/>
+                        <br/>
+                        Rua:    {{Dados.rua}}<br/>
+                        <br/>
+                        Bairro: {{Dados.bairro}}<br/>
+                        <br/>
+                        Cidade: {{Dados.cidade}}<br/>
+                        <br/>
+                        Estado: {{Dados.estado}}<br/>
+                        <br/>
+                
+               
+                    <h2> Dados do Representante </h2>
+
+                        Nome do Representante: {{Dados.nome_representante}}<br/>
+                        <br/>
+                        Cargo: {{Dados.cargo}}<br/>
+                        <br/>
+                        Telefone: {{Dados.telefone}}<br/>
+                        <br/>
+                        Email do Representante: {{Dados.email_representante}}<br/>
+                        <br/>
+
+                
+                        <button type="submit"> Salvar </button>
+                        <button><a href="/"> Voltar </a> </button>
+                </div>
             </form>
 
     </center>

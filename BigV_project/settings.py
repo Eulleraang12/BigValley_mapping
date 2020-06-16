@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'BigV_app_map',
     'localflavor',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [

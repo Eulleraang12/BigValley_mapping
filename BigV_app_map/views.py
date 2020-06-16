@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from BigV_app_map.models import Dados_Mapeamento, Endereco
-from BigV_app_map.forms import TransacaoForm_Dados, TransacaoForm_Endereco
+from BigV_app_map.models import Dados_Mapeamento
+from BigV_app_map.forms import TransacaoForm_Dados
 
 
 # Create your views here.
@@ -24,16 +24,12 @@ def formulario(request):
     data = {}
 
     form_dados = TransacaoForm_Dados(request.POST or None)
-    
 
-    form_endereco = TransacaoForm_Endereco(request.POST or None)
     
-    if form_dados.is_valid() and form_endereco.is_valid():
+    if form_dados.is_valid(): 
         form_dados.save()
-        form_endereco.save()
         return redirect("url_home")
 
     data['Dados'] = form_dados
-    data['Endereco'] = form_endereco
     return render(request, 'env_BigV/formulario.html', data)
 
