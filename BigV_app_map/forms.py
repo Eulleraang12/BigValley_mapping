@@ -8,11 +8,11 @@ from django.forms.widgets import TextInput
 class TransacaoForm_Dados(ModelForm):
     class Meta:
         model = Dados_Mapeamento
-        fields = [ 'nome','site','email',
-                  'rua','bairro','cidade',
-                   'nome_representante','cargo','email_representante', 
+        fields = [ 'nome','site','email','cnpj',
+                   'cep','rua','bairro','cidade','estado',
+                   'nome_representante','cargo','telefone','email_representante', 
                    ]
-                    # 'telefone',,'cnpj''estado', 'cep',
+                    #  
                 
                 
                                #valodar CNPJ e Email
