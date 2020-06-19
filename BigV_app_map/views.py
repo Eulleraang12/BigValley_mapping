@@ -7,16 +7,16 @@ from BigV_app_map.forms import TransacaoForm_Dados
 
 def home(request):
     
-    return  render(request, 'env_BigV/home.html')
+    return  render(request, 'BigV_app_map/home.html')
 
 
 def sobre_map(request):
     
-    return  render(request, 'env_BigV/sobre_map.html')
+    return  render(request, 'BigV_app_map/sobre_map.html')
 
 def vertentes_map(request):
     
-    return  render(request, 'env_BigV/vertentes_map.html')
+    return  render(request, 'BigV_app_map/vertentes_map.html')
 
 
 
@@ -31,5 +31,5 @@ def formulario(request):
         return redirect("url_home")
 
     data['Dados'] = form_dados
-    return render(request, 'env_BigV/formulario.html', data)
+    return render(request, 'BigV_app_map/formulario.html', data)
 
