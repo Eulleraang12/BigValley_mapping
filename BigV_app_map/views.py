@@ -33,3 +33,4 @@ def formulario(request):
     data['Dados'] = form_dados
     return render(request, 'BigV_app_map/formulario.html', data)
 
+
