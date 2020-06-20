@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <center> 
+            <h1>       BIG VALLEY Formulario    </h1>
+
+            <form method="POST">
+                <div>
+                    {% csrf_token %} 
+                
+                    <h2> Dados Cadastrais </h2>
+
+                        Nome: {{Dados.nome}}<br/>
+                        <br/>
+                        Site: {{Dados.site}}<br/>
+                        <br/>
+                        Email: {{Dados.email}}<br/>
+                        <br/>
+                        CNPJ: {{Dados.cnpj}}
+                        <br/>
+                
+                
+                    <h2> Endereço </h2>
+
+                        CEP:    {{Dados.cep}}<br/>
+                        <br/>
+                        Rua:    {{Dados.rua}}<br/>
+                        <br/>
+                        Bairro: {{Dados.bairro}}<br/>
+                        <br/>
+                        Cidade: {{Dados.cidade}}<br/>
+                        <br/>
+                        Estado: {{Dados.estado}}<br/>
+                        <br/>
+                
+               
+                    <h2> Dados do Representante </h2>
+
+                        Nome do Representante: {{Dados.nome_representante}}<br/>
+                        <br/>
+                        Cargo: {{Dados.cargo}}<br/>
+                        <br/>
+                        Telefone: {{Dados.telefone}}<br/>
+                        <br/>
+                        Email do Representante: {{Dados.email_representante}}<br/>
+                        <br/>
+
+                    <h2> Característica da Empresa/Startup </h2>
+
+                        Segmento de Atuação: {{Dados.setor_de_atuacao}}
+                        <br/>
+                        Área de Atuação da Empresa ou Startup: {{Dados.area_de_atuacao_da_empresa_ou_startup}}<br/>
+                        <br/>
+                        Segmento/área: {{Dados.segmento_area}}<br/>
+                        <br/>
+                        Detalhes da área de atuação: {{Dados.detalhes_de_area_de_atuacao}}<br/> 
+                        <br/>
+                        Segmento de Atuação: {{Dados.segmento_de_atuacao}}<br/>
+                        <br/>
+                        Tipo de Clientes: {{Dados.tipo_de_cliente}}<br/>
+
+                    <h2> Questionário </h2>
+
+                        Possui mercado Global? {{Dados.possui_mercado_Global}}<br/>
+                        <br/>
+                        Possui influência ou interesse militar? {{Dados.possui_Influencia_ou_interesse_militar}}
+                        <br/>
+                        Qual estratégia de saída ou idealizadora para o negócio? {{Dados.qual_estrategia_de_saida_ou_idealizada_para_o_negocio}}
+                        <br/>
+                        Sua Startup possui conhecimento ou é treinada nas metodologias descritas abaixo: {{Dados.sua_startup_possui_conhecimento_ou_e_treinada_nas_metodologias_descritas_abaixo}}
+                        Caso outra: {{Dados.caso_outra}}<br/>
+                        <br/>
+                        Startup foi fundada dentro dos 5 anos de graduação dos fundadores ? {{Dados.startup_foi_fundada_dentro_dos_5_anos_de_graduacao_dos_fundadores}}<br/>
+                        <br/>
+                        Número de Sócios:{{Dados.numero_de_socios}}<br/>
+                        <br/>
+                        Ano de Fundação: {{Dados.ano_de_fundacao}}<br/>
+                        <br/>
+                        Já foi investida ? {{Dados.ja_foi_investida}}<br/>
+                        <br/>
+                        Quantas Rodadas ? {{Dados.quantas_rodadas}}<br/>
+                        <br/>
+                        Montante Investido (em R$ e USD): {{Dados.montante_investido}}<br/>
+                        <br/>
+                        Quais os modelos de receitas se enquadra no perfil da empresa / startup ? {{Dados.quais_os_modelos_de_receitas_se_enquadra_no_perfil_da_empresa_startup}}<br/>
+                        <br/>
+                        Quais programas, iniciativas, movimentos de empreendedorismo e inovação que participa: <br/> {{Dados.quais_programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa}}<br/>
+                        <br/>
+                        Com quais entidades do Ecossistema tem conexão, interação frequente, projetos em parceria, colaboração, que contribuíram e contribuem para as inovações e aperfeiçoamento da empresa ?<br/>
+                        {{Dados.com_quais_entidades_do_ecossistema_tem_conexao_interacao_frequente_projetos_em_parceria_colaboracao_que_contribuiram_e_contribuem_para_as_inovacoes_e_aperfeicoamento_da_empresa}}<br/>
+                        <br/>
+                        Estes parceiros listados acima possuem que esfera ? {{Dados.estes_parceiros_listados_acima_possuem_que_esfera}}<br/>
+                        <br/>
+
+
+                    
+                                
+
+
+
+
+
+                        <button type="submit"> Salvar </button>
+                        <button><a href="{%url 'url_home'%}"> Voltar </a> </button>
+                </div>
+            </form>
+
+    </center>
+
+</body>
+</html>
