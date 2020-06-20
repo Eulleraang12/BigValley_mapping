@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'BigV_app_map',
     'localflavor',
     'phonenumber_field',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
