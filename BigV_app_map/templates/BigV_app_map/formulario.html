@@ -1,6 +1,11 @@
+{% load static %} 
+<!-- usa o jinja para puxar a pasta static -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
@@ -99,14 +104,13 @@
 
 
                     
-                                
+                            
+                        <button type="submit" class="btn btn-success">Salvar</button>   
+                        <button type="button" class="btn btn-dark"><a href="{%url 'url_home'%}"> Voltar </a></button>  
+                        <br/>
+                        <br/>
 
-
-
-
-
-                        <button type="submit"> Salvar </button>
-                        <button><a href="{%url 'url_home'%}"> Voltar </a> </button>
+                        
                 </div>
             </form>
 
