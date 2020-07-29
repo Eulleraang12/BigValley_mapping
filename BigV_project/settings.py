@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'localflavor',
     'phonenumber_field',
     'multiselectfield',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [

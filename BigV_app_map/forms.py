@@ -38,7 +38,7 @@ class TransacaoForm_Dados(ModelForm):
             'possui_mercado_Global': RadioSelect(),
             'possui_Influencia_ou_interesse_militar': RadioSelect(),
             'qual_estrategia_de_saida_ou_idealizada_para_o_negocio': CheckboxSelectMultiple(),
-            'sua_startup_possui_conhecimento_ou_e_treinada_nas_metodologias_descritas_abaixo':CheckboxSelectMultiple(),
+            'sua_startup_possui_conhecimento_ou_e_treinada_nas_metodologias_descritas_abaixo': CheckboxSelectMultiple(),
             'startup_foi_fundada_dentro_dos_5_anos_de_graduacao_dos_fundadores': RadioSelect(),
             
             }
