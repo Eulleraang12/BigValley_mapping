@@ -6,7 +6,7 @@ https://www.python.org/downloads/
 2- criar um ambiente virtual 
 pip install virtualenv
 
-mkvirtual [nomedoambiente]
+mkvirtualenv [nomedoambiente]
 
 pip install virtualenvwrapper-win (para versionar o ambiente com workon)
 
