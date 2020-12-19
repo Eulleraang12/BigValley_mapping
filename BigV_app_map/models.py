@@ -26,7 +26,7 @@ class Dados_Mapeamento_startup(models.Model):
 # #dados do Representante 
     nome_representante = models.CharField(max_length=100, default='')
     cargo = models.CharField(max_length = 20, default='')
-    telefone = PhoneNumberField(default='')
+    telefone = PhoneNumberField()
     email_representante = models.EmailField(default='')
 # ########################################################################################################################################
 
