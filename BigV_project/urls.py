@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from BigV_app_map.views import home,formulario,sobre_map,vertentes_map
+from BigV_app_map.views import home,startup,empresa
+
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home,name = 'url_home'),
-    path('formulario/', formulario,name = 'url_formulario'),
-    path('sobre_map/', sobre_map,name = 'url_sobre_map'),
-    path('vertentes_map/', vertentes_map,name = 'url_vertente_map')
-
+    path('admin/', admin.site.urls, name = 'admin'),
+    path('', home, name = 'url_home'),
+    path('startup', startup, name = 'url_startup'),
+    path('empresa', empresa, name = 'url_empresa'),
+    
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 

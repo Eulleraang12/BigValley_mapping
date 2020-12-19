@@ -1,0 +1,148 @@
+{% extends "BigV_app_map/home.html" %} 
+
+<!-- Autopreenchimento de endereço  -->
+
+
+{% block title %} BIG VALLEY Cadastro de Empresa  {% endblock %}
+
+{% block conteudo %}
+<div class="container">
+<!-- <div class="row"> -->
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
+        <form method="POST">
+        {% csrf_token %} 
+        <br>
+        <div class = 'form'>
+            <h2> Dados Cadastrais </h2> <br>
+        <p><label> Nome do Ator/Entidade</label> {{Dados2.nome}}</p>
+        <p><label> {{Dados2.pessoa}}</label></p>
+        <center><label  class='label'> Identidade Visual / Logomarca da Instituição {{Dados2.logo}} </label></center>
+
+        </div>
+        <br>
+        <div class = 'form'>
+            
+            <h2> Endereço Institucional </h2> <br>
+                <p><label> CEP:  </label>{{Dados2.cep}}</p>
+                <p><label> Rua:  </label>{{Dados2.rua}}</p>
+                <p><label> Bairro: </label>{{Dados2.bairro}}</p>
+                <p><label> Cidade:  </label>{{Dados2.cidade}}</p> 
+                <p><label> Estado:  </label>{{Dados2.estado}}</p>
+                <p><label> Site: </label>{{Dados2.site}}</p>
+                <p><label> Email:</label>{{Dados2.email}}</p>
+
+        </div>
+        <br>
+        <div class = 'form'>
+            <h2>Dados do Representante </h2>
+            <br>
+            <p><label> Nome do Representante: </label>{{Dados2.nome_representante}}</p>
+            <p><label> Cargo:</label>{{Dados2.cargo}}</p>
+            <p><label> Telefone: </label>{{Dados2.telefone}}</p>
+            <p><label>Email do Representante: </label>{{Dados2.email_representante}}</p>
+        </div>
+        <br>
+        <div class = 'form'>
+            <h2>Campo de Abrangência da Instituição Cadastrada</h2>
+            <br>
+            <p><label> Em qual deste itens abaixo, seu cadastro se enquadra:</label>{{Dados2.em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra}}</p>
+           
+            <p id = 'principal'><label> Em qual desses setores a instituição se enquadra:</label>{{Dados2.em_qual_destes_setores_a_instituicao_se_enquadra}}</p>
+            
+            <p  hidden id= 'politica'><label> Sobre Referência Política: </label> {{Dados2.sobre_referencia_politica}}</p>
+            <p  hidden id= 'cultura'><label> Referente à Cultura: </label> {{Dados2.referente_a_cultura}}</p>
+            <p  hidden id= 'CapitalHumano'><label> Referente à Capital Humano: </label> {{Dados2.referente_a_capital_humano}}</p>
+            <p  hidden id= 'financeiro'><label> Referente à Financeiro: </label> {{Dados2.referente_a_financeiro}}</p>
+            <p  hidden id= 'suporte'><label> Referente à Suporte: </label> {{Dados2.referente_a_suporte}}</p>
+            <p  hidden id= 'mercado'><label> Referente à Mercado: </label> {{Dados2.referente_a_mercado}}</p>
+            
+        
+            
+            
+            <p><label> Segmento </label>{{Dados2.segmento}}</p>
+        </div>
+        <br>
+        <div class = 'form'>
+            <h2> Sobre Projetos, iniciativas, parceirias e infraestrutura</h2> <br>
+            <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que executa:</label>{{Dados2.programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_executa}}</p>
+            <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que participa:</label> {{Dados2.programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa}}</p>
+            <p><label> Equipamentos disponíveis para uso compartilhado, prestação de serviços no Ecossistema Regional</label> {{Dados2.equipamentos_disponiveis_para_uso_compartilhado_prestacao_de_servico_no_Ecossistema_Regional}}</p>   
+
+            <button type="submit" class= 'botao'> Enviar </button>  
+        </div>
+        </form>
+
+        <script>
+            // valor pega no form com o onchange no dict, respeitando os id no html e form django
+            function sumir(valor){
+                if(valor == 'pol'){ 
+
+                    document.getElementById('politica').hidden = false;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                } else if(valor == 'cul'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = false;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                } else if(valor == 'ch'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = false;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'ch'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = false;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'fin'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = false;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'sup'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = false;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == '' || valor == 'merc'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }
+
+            
+            }
+        </script>
+</div>
+
+{% endblock %}

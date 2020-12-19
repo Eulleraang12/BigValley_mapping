@@ -1,0 +1,86 @@
+{% extends "BigV_app_map/home.html" %} 
+
+<!-- Autopreenchimento de endereço  -->
+
+
+{% block title %} BIG VALLEY Cadastro de Startup  {% endblock %}
+
+{% block conteudo %}
+<div class="container">
+  <!-- <div class="row"> -->
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
+        <form method="POST">
+          {% csrf_token %} 
+          <br>
+          <div class = 'form'>
+          
+            <h2> Dados Cadastrais </h2>
+              <p><label> Nome:  </label> {{Dados.nome}} </p>
+              <p><label> Site:  </label>  {{Dados.site}} </p>
+              <p><label> Email: </label> {{Dados.email}} </p>
+              <p><label> CNPJ:  </label>  {{Dados.cnpj}} </p>
+              <center><label class='label'> Enviar Logo da Instituição  {{Dados.logo}}</label></center>
+
+            </div>
+            <br>
+            <div class = 'form'>
+              
+              <h2> Endereço da Startup </h2>
+              <p><label> CEP:  </label> {{Dados.cep}} </p>
+              <p><label> Rua:  </label>  {{Dados.rua}} </p>
+              <p><label> Bairro: </label> {{Dados.bairro}} </p>
+              <p><label> Cidade:  </label>  {{Dados.cidade}} </p>
+              <p><label> Estado:  </label>  {{Dados.estado}} </p>
+              
+            </div>
+            <br>
+            <div class = 'form'>
+
+              <h2> Dados do Representante </h2> <br>
+              <p><label> Nome do Representante:  </label> {{Dados.nome_representante}} </p>
+              <p><label> Cargo:  </label>  {{Dados.cargo}} </p>
+              <p><label> Telefone: </label> {{Dados.telefone}} </p>
+              <p><label> Email do Representante:  </label>  {{Dados.email_representante}} </p>
+            </div>
+            <br>
+            <div class = 'form'>
+
+              <h2> Característica da Startup </h2> <br>
+              <p><label> Setor de atuação: </label>  {{Dados.setor_de_atuacao}}</p>
+              <p><label> Area de atuação da Startup:  </label>  {{Dados.area_de_atuacao_da_startup}} </p>
+              <p><label> Segmento/Área : </label> {{Dados.segmento_area}} </p>
+              <p><label> Detalhe da área de atuação:  </label>  {{Dados.detalhes_de_area_de_atuacao}} </p>
+              <p><label> Segmento de atuação:  </label>  {{Dados.segmento_de_atuacao}} </p>
+              <p><label> Tipo de Cliente:  </label>  {{Dados.tipo_de_cliente}} </p>
+            </div>
+            <br>
+            <div class = 'form'>
+              <h2> Questionário </h2>
+              <p><label> Possui mercado Global? </label>  {{Dados.possui_mercado_global}} </p>
+              <p><label> Possui influência ou interesse militar? </label>  {{Dados.possui_Influencia_ou_interesse_militar}} </p>
+              <p><label> Qual estratégia de saída ou idealizada para o negócio? </label>  {{Dados.qual_estrategia_de_saida_ou_idealizada_para_o_negocio}} </p>
+              <p><label> Sua Startup possui conhecimento ou é treinada nas metodologias descritas abaixo: </label>  {{Dados.sua_startup_possui_conhecimento_ou_e_treinada_nas_metodologias_descritas_abaixo}} </p>
+              <p><label> Caso tenha marcado "Outras". Quais modelos? </label>  {{Dados.caso_outra}} </p>
+              <p><label> Startup foi fundada dentro dos 5 anos de graduação dos fundadores ? </label>  {{Dados.startup_foi_fundada_dentro_dos_5_anos_de_graduacao_dos_fundadores}} </p>
+              <p><label> Número de Sócios: </label>  {{Dados.numero_de_socios}} </p>
+              <p><label> Ano de Fundação: </label>  {{Dados.ano_de_fundacao}} </p>
+              <p><label> Já teve rodadas de investimento? </label>  {{Dados.ja_foi_investida}} </p>
+              <p><label> Quantas Rodadas ?</label>  {{Dados.quantas_rodadas}} </p>
+              <p><label> Montante Investido (em R$ e USD): </label>  {{Dados.montante_investido}} </p>
+              <p><label> Quais os modelos de receitas se enquadra no perfil da Startup ?</label>  {{Dados.quais_os_modelos_de_receitas_se_enquadra_no_perfil_da_empresa_startup}} </p>                 
+              <p><label> Quais programas, iniciativas, movimentos de empreendedorismo e inovação que participa:</label>  {{Dados.quais_programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa}} </p>
+              <p><label> Com quais entidades do Ecossistema tem conexão, interação frequente, projetos em parceria, colaboração, que contribuíram e contribuem para as inovações e aperfeiçoamento da empresa ? </label>  {{Dados.com_quais_entidades_do_ecossistema_tem_conexao_interacao_frequente_projetos_em_parceria_colaboracao_que_contribuiram_e_contribuem_para_as_inovacoes_e_aperfeicoamento_da_empresa}} </p>
+              <p><label> Estes parceiros listados acima possuem que esfera ? </label>  {{Dados.estes_parceiros_listados_acima_possuem_que_esfera}} </p>
+               
+    
+            <button type="submit" class= 'botao'> Enviar </button>  
+            </div>
+          
+      
+        </form> 
+          
+    <!-- </div> -->
+  <!-- </div> -->
+</div>
+
+{% endblock %}

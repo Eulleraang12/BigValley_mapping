@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8000/empresa -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Title -->
+    <title>
+       BIG VALLEY Cadastro de Empresa  
+    </title>
+
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="./BIG VALLEY Cadastro de Empresa_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./BIG VALLEY Cadastro de Empresa_files/style.css">
+    <!--<link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css">--><!-- Autopreenchimento de endereço -->
+
+    <!-- Bloco de Estilos -->
+     
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">
+            <img src="./BIG VALLEY Cadastro de Empresa_files/BgV.jpg" height="45px">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudo-navbar" aria-controls="conteudo-navbar" aria-expanded="false" aria-label="Ativar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="conteudo-navbar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <!-- referencia para chamar o admin -->
+                <a class="nav-link" href="http://127.0.0.1:8000/admin"> 
+                      Administrativo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/startup">
+                      Sou uma Startup
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/empresa">
+                    Sou uma Empresa 
+                  </a>
+              </li>
+            </ul>           
+        </div>
+
+    </nav>
+      
+    <!-- Bloco de conteúdo -->
+    
+<div class="container">
+<!-- <div class="row"> -->
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
+        <form method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="YZ9c1YWj1F3G2IYqbNdZoDeDgv4puAQWqNtxQHK8vJFrfaQvqXo8LNwsqafxvNyZ"> 
+        <br>
+        <div class="form">
+            <h2> Dados Cadastrais </h2> <br>
+        <p><label> Nome do Ator/Entidade</label> <input type="text" name="nome" placeholder="Nome da Empresa" maxlength="10" required="" id="id_nome"></p>
+        <p><label> <select name="pessoa" id="id_pessoa">
+  <option value="PF">Pessoa Física</option>
+
+  <option value="PJ">Pessoa Jurídica</option>
+
+</select></label></p>
+        <center><label class="label"> Identidade Visual / Logomarca da Instituição <input type="file" name="logo" class="label" accept="image/*" id="id_logo"> </label></center>
+
+        </div>
+        <br>
+        <div class="form">
+            
+            <h2> Endereço Institucional </h2> <br>
+                <p><label> CEP:  </label><input type="text" name="cep" placeholder="xxxxx-xxx" maxlength="9" required="" id="id_cep"></p>
+                <p><label> Rua:  </label><input type="text" name="rua" maxlength="100" required="" id="id_rua"></p>
+                <p><label> Bairro: </label><input type="text" name="bairro" maxlength="100" required="" id="id_bairro"></p>
+                <p><label> Cidade:  </label><input type="text" name="cidade" maxlength="100" required="" id="id_cidade"></p> 
+                <p><label> Estado:  </label><select name="estado" id="id_estado">
+  <option value="AC">Acre</option>
+
+  <option value="AL">Alagoas</option>
+
+  <option value="AP">Amapá</option>
+
+  <option value="AM">Amazonas</option>
+
+  <option value="BA">Bahia</option>
+
+  <option value="CE">Ceará</option>
+
+  <option value="DF">Distrito Federal</option>
+
+  <option value="ES">Espírito Santo</option>
+
+  <option value="GO">Goiás</option>
+
+  <option value="MA">Maranhão</option>
+
+  <option value="MT">Mato Grosso</option>
+
+  <option value="MS">Mato Grosso do Sul</option>
+
+  <option value="MG">Minas Gerais</option>
+
+  <option value="PA">Pará</option>
+
+  <option value="PB">Paraíba</option>
+
+  <option value="PR">Paraná</option>
+
+  <option value="PE">Pernambuco</option>
+
+  <option value="PI">Piauí</option>
+
+  <option value="RJ">Rio de Janeiro</option>
+
+  <option value="RN">Rio Grande do Norte</option>
+
+  <option value="RS">Rio Grande do Sul</option>
+
+  <option value="RO">Rondônia</option>
+
+  <option value="RR">Roraima</option>
+
+  <option value="SC">Santa Catarina</option>
+
+  <option value="SP">São Paulo</option>
+
+  <option value="SE">Sergipe</option>
+
+  <option value="TO">Tocantins</option>
+
+</select></p>
+                <p><label> Site: </label><input type="text" name="site" placeholder="http://www.seuwebsite.com" maxlength="400" id="id_site"></p>
+                <p><label> Email:</label><input type="text" name="email" placeholder="meuemail@qualquer.com" maxlength="254" required="" id="id_email"></p>
+
+        </div>
+        <br>
+        <div class="form">
+            <h2>Dados do Representante </h2>
+            <br>
+            <p><label> Nome do Representante: </label><input type="text" name="nome_representante" maxlength="100" required="" id="id_nome_representante"></p>
+            <p><label> Cargo:</label><input type="text" name="cargo" maxlength="20" required="" id="id_cargo"></p>
+            <p><label> Telefone: </label><select name="telefone_0" placeholder="xxxxxxx-xxxx" maxlength="128" required="" id="id_telefone_0"><option value="" selected="">---------</option><option value="+93">Afghanistan +93</option><option value="+355">Albania +355</option><option value="+213">Algeria +213</option><option value="+1">American Samoa +1</option><option value="+376">Andorra +376</option><option value="+244">Angola +244</option><option value="+1">Anguilla +1</option><option value="+1">Antigua &amp; Barbuda +1</option><option value="+54">Argentina +54</option><option value="+374">Armenia +374</option><option value="+297">Aruba +297</option><option value="+247">Ascension Island +247</option><option value="+61">Australia +61</option><option value="+43">Austria +43</option><option value="+994">Azerbaijan +994</option><option value="+1">Bahamas +1</option><option value="+973">Bahrain +973</option><option value="+880">Bangladesh +880</option><option value="+1">Barbados +1</option><option value="+375">Belarus +375</option><option value="+32">Belgium +32</option><option value="+501">Belize +501</option><option value="+229">Benin +229</option><option value="+1">Bermuda +1</option><option value="+975">Bhutan +975</option><option value="+591">Bolivia +591</option><option value="+387">Bosnia &amp; Herzegovina +387</option><option value="+267">Botswana +267</option><option value="+55">Brazil +55</option><option value="+246">British Indian Ocean Territory +246</option><option value="+1">British Virgin Islands +1</option><option value="+673">Brunei +673</option><option value="+359">Bulgaria +359</option><option value="+226">Burkina Faso +226</option><option value="+257">Burundi +257</option><option value="+855">Cambodia +855</option><option value="+237">Cameroon +237</option><option value="+1">Canada +1</option><option value="+238">Cape Verde +238</option><option value="+599">Caribbean Netherlands +599</option><option value="+1">Cayman Islands +1</option><option value="+236">Central African Republic +236</option><option value="+235">Chad +235</option><option value="+56">Chile +56</option><option value="+86">China +86</option><option value="+61">Christmas Island +61</option><option value="+61">Cocos (Keeling) Islands +61</option><option value="+57">Colombia +57</option><option value="+269">Comoros +269</option><option value="+242">Congo - Brazzaville +242</option><option value="+243">Congo - Kinshasa +243</option><option value="+682">Cook Islands +682</option><option value="+506">Costa Rica +506</option><option value="+385">Croatia +385</option><option value="+53">Cuba +53</option><option value="+599">Curaçao +599</option><option value="+357">Cyprus +357</option><option value="+420">Czechia +420</option><option value="+225">Côte d’Ivoire +225</option><option value="+45">Denmark +45</option><option value="+253">Djibouti +253</option><option value="+1">Dominica +1</option><option value="+1">Dominican Republic +1</option><option value="+593">Ecuador +593</option><option value="+20">Egypt +20</option><option value="+503">El Salvador +503</option><option value="+240">Equatorial Guinea +240</option><option value="+291">Eritrea +291</option><option value="+372">Estonia +372</option><option value="+268">Eswatini +268</option><option value="+251">Ethiopia +251</option><option value="+500">Falkland Islands +500</option><option value="+298">Faroe Islands +298</option><option value="+679">Fiji +679</option><option value="+358">Finland +358</option><option value="+33">France +33</option><option value="+594">French Guiana +594</option><option value="+689">French Polynesia +689</option><option value="+241">Gabon +241</option><option value="+220">Gambia +220</option><option value="+995">Georgia +995</option><option value="+49">Germany +49</option><option value="+233">Ghana +233</option><option value="+350">Gibraltar +350</option><option value="+30">Greece +30</option><option value="+299">Greenland +299</option><option value="+1">Grenada +1</option><option value="+590">Guadeloupe +590</option><option value="+1">Guam +1</option><option value="+502">Guatemala +502</option><option value="+44">Guernsey +44</option><option value="+224">Guinea +224</option><option value="+245">Guinea-Bissau +245</option><option value="+592">Guyana +592</option><option value="+509">Haiti +509</option><option value="+504">Honduras +504</option><option value="+852">Hong Kong SAR China +852</option><option value="+36">Hungary +36</option><option value="+354">Iceland +354</option><option value="+91">India +91</option><option value="+62">Indonesia +62</option><option value="+98">Iran +98</option><option value="+964">Iraq +964</option><option value="+353">Ireland +353</option><option value="+44">Isle of Man +44</option><option value="+972">Israel +972</option><option value="+39">Italy +39</option><option value="+1">Jamaica +1</option><option value="+81">Japan +81</option><option value="+44">Jersey +44</option><option value="+962">Jordan +962</option><option value="+7">Kazakhstan +7</option><option value="+254">Kenya +254</option><option value="+686">Kiribati +686</option><option value="+383">Kosovo +383</option><option value="+965">Kuwait +965</option><option value="+996">Kyrgyzstan +996</option><option value="+856">Laos +856</option><option value="+371">Latvia +371</option><option value="+961">Lebanon +961</option><option value="+266">Lesotho +266</option><option value="+231">Liberia +231</option><option value="+218">Libya +218</option><option value="+423">Liechtenstein +423</option><option value="+370">Lithuania +370</option><option value="+352">Luxembourg +352</option><option value="+853">Macao SAR China +853</option><option value="+261">Madagascar +261</option><option value="+265">Malawi +265</option><option value="+60">Malaysia +60</option><option value="+960">Maldives +960</option><option value="+223">Mali +223</option><option value="+356">Malta +356</option><option value="+692">Marshall Islands +692</option><option value="+596">Martinique +596</option><option value="+222">Mauritania +222</option><option value="+230">Mauritius +230</option><option value="+262">Mayotte +262</option><option value="+52">Mexico +52</option><option value="+691">Micronesia +691</option><option value="+373">Moldova +373</option><option value="+377">Monaco +377</option><option value="+976">Mongolia +976</option><option value="+382">Montenegro +382</option><option value="+1">Montserrat +1</option><option value="+212">Morocco +212</option><option value="+258">Mozambique +258</option><option value="+95">Myanmar (Burma) +95</option><option value="+264">Namibia +264</option><option value="+674">Nauru +674</option><option value="+977">Nepal +977</option><option value="+31">Netherlands +31</option><option value="+687">New Caledonia +687</option><option value="+64">New Zealand +64</option><option value="+505">Nicaragua +505</option><option value="+227">Niger +227</option><option value="+234">Nigeria +234</option><option value="+683">Niue +683</option><option value="+672">Norfolk Island +672</option><option value="+850">North Korea +850</option><option value="+389">North Macedonia +389</option><option value="+1">Northern Mariana Islands +1</option><option value="+47">Norway +47</option><option value="+968">Oman +968</option><option value="+92">Pakistan +92</option><option value="+680">Palau +680</option><option value="+970">Palestinian Territories +970</option><option value="+507">Panama +507</option><option value="+675">Papua New Guinea +675</option><option value="+595">Paraguay +595</option><option value="+51">Peru +51</option><option value="+63">Philippines +63</option><option value="+48">Poland +48</option><option value="+351">Portugal +351</option><option value="+1">Puerto Rico +1</option><option value="+974">Qatar +974</option><option value="+40">Romania +40</option><option value="+7">Russia +7</option><option value="+250">Rwanda +250</option><option value="+262">Réunion +262</option><option value="+685">Samoa +685</option><option value="+378">San Marino +378</option><option value="+966">Saudi Arabia +966</option><option value="+221">Senegal +221</option><option value="+381">Serbia +381</option><option value="+248">Seychelles +248</option><option value="+232">Sierra Leone +232</option><option value="+65">Singapore +65</option><option value="+1">Sint Maarten +1</option><option value="+421">Slovakia +421</option><option value="+386">Slovenia +386</option><option value="+677">Solomon Islands +677</option><option value="+252">Somalia +252</option><option value="+27">South Africa +27</option><option value="+82">South Korea +82</option><option value="+211">South Sudan +211</option><option value="+34">Spain +34</option><option value="+94">Sri Lanka +94</option><option value="+590">St. Barthélemy +590</option><option value="+290">St. Helena +290</option><option value="+1">St. Kitts &amp; Nevis +1</option><option value="+1">St. Lucia +1</option><option value="+590">St. Martin +590</option><option value="+508">St. Pierre &amp; Miquelon +508</option><option value="+1">St. Vincent &amp; Grenadines +1</option><option value="+249">Sudan +249</option><option value="+597">Suriname +597</option><option value="+47">Svalbard &amp; Jan Mayen +47</option><option value="+46">Sweden +46</option><option value="+41">Switzerland +41</option><option value="+963">Syria +963</option><option value="+239">São Tomé &amp; Príncipe +239</option><option value="+886">Taiwan +886</option><option value="+992">Tajikistan +992</option><option value="+255">Tanzania +255</option><option value="+66">Thailand +66</option><option value="+670">Timor-Leste +670</option><option value="+228">Togo +228</option><option value="+690">Tokelau +690</option><option value="+676">Tonga +676</option><option value="+1">Trinidad &amp; Tobago +1</option><option value="+290">Tristan da Cunha +290</option><option value="+216">Tunisia +216</option><option value="+90">Turkey +90</option><option value="+993">Turkmenistan +993</option><option value="+1">Turks &amp; Caicos Islands +1</option><option value="+688">Tuvalu +688</option><option value="+1">U.S. Virgin Islands +1</option><option value="+256">Uganda +256</option><option value="+380">Ukraine +380</option><option value="+971">United Arab Emirates +971</option><option value="+44">United Kingdom +44</option><option value="+1">United States +1</option><option value="+598">Uruguay +598</option><option value="+998">Uzbekistan +998</option><option value="+678">Vanuatu +678</option><option value="+39">Vatican City +39</option><option value="+58">Venezuela +58</option><option value="+84">Vietnam +84</option><option value="+681">Wallis &amp; Futuna +681</option><option value="+212">Western Sahara +212</option><option value="+800">World +800</option><option value="+808">World +808</option><option value="+870">World +870</option><option value="+878">World +878</option><option value="+881">World +881</option><option value="+882">World +882</option><option value="+883">World +883</option><option value="+888">World +888</option><option value="+979">World +979</option><option value="+967">Yemen +967</option><option value="+260">Zambia +260</option><option value="+263">Zimbabwe +263</option><option value="+358">Åland Islands +358</option></select><input type="text" name="telefone_1" placeholder="xxxxxxx-xxxx" maxlength="128" required="" id="id_telefone_1"></p>
+            <p><label>Email do Representante: </label><input type="text" name="email_representante" placeholder="meuemail@qualquer.com" maxlength="254" required="" id="id_email_representante"></p>
+        </div>
+        <br>
+        <div class="form">
+            <h2>Campo de Abrangência da Instituição Cadastrada</h2>
+            <br>
+            <p><label> Em qual deste itens abaixo, seu cadastro se enquadra:</label></p><ul id="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra">
+    <li><label for="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_0"><input type="checkbox" name="em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra" value="aca" id="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_0">
+ Academia (inst. de Nível Técnico ou Superior)</label>
+
+</li>
+    <li><label for="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_1"><input type="checkbox" name="em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra" value="empre" id="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_1">
+ Empresa</label>
+
+</li>
+    <li><label for="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_2"><input type="checkbox" name="em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra" value="soc" id="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_2">
+ Sociedade</label>
+
+</li>
+    <li><label for="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_3"><input type="checkbox" name="em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra" value="gov" id="id_em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra_3">
+ Governo</label>
+
+</li>
+</ul><p></p>
+           
+            <p id="principal"><label> Em qual desses setores a instituição se enquadra:</label><select name="em_qual_destes_setores_a_instituicao_se_enquadra" onchange="sumir(this.value);" required="" id="id_em_qual_destes_setores_a_instituicao_se_enquadra">
+  <option value="" selected="">---------</option>
+
+  <option value="pol">Política</option>
+
+  <option value="cul">Cultura</option>
+
+  <option value="ch">Capital Humano</option>
+
+  <option value="fin">Financeiro</option>
+
+  <option value="sup">Suporte</option>
+
+  <option value="merc">Mercado</option>
+
+</select></p>
+            
+            <p hidden="" id="politica"><label> Sobre Referência Política: </label> <select name="sobre_referencia_politica" id="id_sobre_referencia_politica">
+  <option value="" selected="">---------</option>
+
+  <option value="gov">Gorverno</option>
+
+  <option value="out">Outras Lideranças Política</option>
+
+</select></p>
+            <p id="cultura" hidden=""><label> Referente à Cultura: </label> <select name="referente_a_cultura" id="id_referente_a_cultura">
+  <option value="" selected="">---------</option>
+
+  <option value="cul">Cultura / Valores Sociais e Empreendedores</option>
+
+</select></p>
+            <p id="CapitalHumano" hidden=""><label> Referente à Capital Humano: </label> <select name="referente_a_capital_humano" id="id_referente_a_capital_humano">
+  <option value="" selected="">---------</option>
+
+  <option value="Emp">Empreendedores</option>
+
+  <option value="Esp">Especialistas - Talentos Técnicos e Criativos</option>
+
+  <option value="Pro">Professores / Pesquisadores</option>
+
+  <option value="Inv">Inventores</option>
+
+  <option value="Aca">Academia / Curso Técnico e Graduação</option>
+
+</select></p>
+            <p id="financeiro"><label> Referente à Financeiro: </label> <select name="referente_a_financeiro" id="id_referente_a_financeiro">
+  <option value="" selected="">---------</option>
+
+  <option value="fin">Capital</option>
+
+</select></p>
+            <p hidden="" id="suporte"><label> Referente à Suporte: </label> <select name="referente_a_suporte" id="id_referente_a_suporte">
+  <option value="" selected="">---------</option>
+
+  <option value="Org">Organizações Integrativas</option>
+
+  <option value="Ser">Serviços de Suporte a Negócios e ao Ecossistema</option>
+
+  <option value="Coa">Coaches</option>
+
+  <option value="Con">Consultores</option>
+
+  <option value="Ace">Acessores</option>
+
+  <option value="Men">Mentores</option>
+
+</select></p>
+            <p hidden="" id="mercado"><label> Referente à Mercado: </label> </p>
+            
+        
+            
+            
+            <p><label> Segmento </label><select name="segmento" id="id_segmento">
+  <option value="Aer">Aeronáutico</option>
+
+  <option value="Agr">Agronégocio</option>
+
+  <option value="Arq">Arquitetura e Design</option>
+
+  <option value="Aut">Automotivo</option>
+
+  <option value="Bel">Beleza</option>
+
+  <option value="Bio">Biotecnologia</option>
+
+  <option value="Com">Comida e Bebida</option>
+
+  <option value="Con">Construção Civil</option>
+
+  <option value="Edu">Educação</option>
+
+  <option value="Far">Farmacêutico</option>
+
+  <option value="Ges">Gestão de Resíduos</option>
+
+  <option value="Mat">Matérias Primas e Químicos</option>
+
+  <option value="Mod">Moda e Textil</option>
+
+  <option value="Mid">Midia</option>
+
+  <option value="Saú">Saúde e Bem-estar</option>
+
+  <option value="Ser">Serviço</option>
+
+  <option value="Tec">Tech: TI e Software</option>
+
+  <option value="Tec">Tech: Hardware e Equipamentos</option>
+
+  <option value="Tec">Tech: Mobile</option>
+
+  <option value="Tel">Telecomunicações</option>
+
+  <option value="Var">Varejo</option>
+
+  <option value="Naú">Naútico</option>
+
+  <option value="Nav">Naval</option>
+
+  <option value="Art">Arte e Cultura</option>
+
+  <option value="Tur">Turismo</option>
+
+</select></p>
+        </div>
+        <br>
+        <div class="form">
+            <h2> Sobre Projetos, iniciativas, parceirias e infraestrutura</h2> <br>
+            <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que executa:</label><textarea name="programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_executa" cols="40" rows="10" id="Textarea" maxlength="100000" required=""></textarea></p>
+            <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que participa:</label> <textarea name="programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa" cols="40" rows="10" id="Textarea" maxlength="100000" required=""></textarea></p>
+            <p><label> Equipamentos disponíveis para uso compartilhado, prestação de serviços no Ecossistema Regional</label> <textarea name="equipamentos_disponiveis_para_uso_compartilhado_prestacao_de_servico_no_Ecossistema_Regional" cols="40" rows="10" id="Textarea" maxlength="100000" required=""></textarea></p>   
+
+            <button type="submit" class="botao"> Enviar </button>  
+        </div>
+        </form>
+
+        <script>
+            // valor pega no form com o onchange no dict, respeitando os id no html e form django
+            function sumir(valor){
+                if(valor == 'pol'){ 
+
+                    document.getElementById('politica').hidden = false;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                } else if(valor == 'cul'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = false;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                } else if(valor == 'ch'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = false;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'ch'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = false;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'fin'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = false;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == 'sup'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = false;
+                    document.getElementById('mercado').hidden = true;
+
+                }else if(valor == '' || valor == 'mercado'){
+
+                    document.getElementById('politica').hidden = true;
+                    document.getElementById('cultura').hidden = true;
+                    document.getElementById('CapitalHumano').hidden = true;
+                    document.getElementById('financeiro').hidden = true;
+                    document.getElementById('suporte').hidden = true;
+                    document.getElementById('mercado').hidden = true;
+
+                }
+
+            
+            }
+        </script>
+</div>
+
+
+
+    <!-- Bloco de scripts -->
+      
+
+    <!-- Scripts.js -->
+    <script src="./BIG VALLEY Cadastro de Empresa_files/scripts.js.download"></script>
+    <script src="./BIG VALLEY Cadastro de Empresa_files/jquery-3.5.1.min.js.download"></script>
+    
+    
+    <!--Autopreenchimento de endereço -->
+    <!-- <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script> -->
+  
+</body></html>

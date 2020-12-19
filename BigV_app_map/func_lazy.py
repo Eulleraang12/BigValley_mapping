@@ -43,4 +43,25 @@ def receita_lazy():
     return y
 
 
+def capital_humano_lazy():
+
+    setores = [ 'Empreendedores','Especialistas - Talentos Técnicos e Criativos','Professores / Pesquisadores',
+               'Inventores', 'Academia / Curso Técnico e Graduação'
+            ]
+    y = []
+    for setor in setores:
+        x = ['{}'.format(setor[0:3]), '{}'.format(setor)]
+        y.append(x)
+    return y
+
+def suporte_lazy():
+
+    setores = [ "Organizações Integrativas","Serviços de Suporte a Negócios e ao Ecossistema","Coaches",'Consultores',
+               'Acessores','Mentores',
+            ]
+    y = []
+    for setor in setores:
+        x = ['{}'.format(setor[0:3]), '{}'.format(setor)]
+        y.append(x)
+    return y
 
