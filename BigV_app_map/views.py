@@ -12,7 +12,7 @@ def home(request):
 def startup(request):
     data = {}
 
-    form_dados = TransacaoForm_Dados_startup(request.POST or None)
+    form_dados = TransacaoForm_Dados_startup(request.POST, request.FILES or None)
 
     if form_dados.is_valid(): 
         form_dados.save()
@@ -24,7 +24,7 @@ def startup(request):
 def empresa(request):
     data = {}
 
-    form_dados = TransacaoForm_Dados_empresa(request.POST or None)
+    form_dados = TransacaoForm_Dados_empresa(request.POST, request.FILES or None)
 
     if form_dados.is_valid(): 
         form_dados.save()
