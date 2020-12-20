@@ -76,6 +76,7 @@ class TransacaoForm_Dados_empresa(ModelForm):
             'email_representante': TextInput(attrs={'placeholder': 'meuemail@qualquer.com'}),
             
             #Campo de Abrangência da Instituição Cadastrada
+            'em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra' : CheckboxSelectMultiple(),
             'em_qual_destes_setores_a_instituicao_se_enquadra' : Select(attrs={ 'onchange':"sumir(this.value);"}), #pegando função do js
     
             

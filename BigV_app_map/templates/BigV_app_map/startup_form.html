@@ -9,13 +9,13 @@
 <div class="container">
   <!-- <div class="row"> -->
     <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
           {% csrf_token %} 
           <br>
           <div class = 'form'>
           
             <h2> Dados Cadastrais </h2>
-              <p><label> Nome:  </label> {{Dados.nome}} </p>
+              <p><label> Nome: </label>  {{Dados.nome}} </p>
               <p><label> Site:  </label>  {{Dados.site}} </p>
               <p><label> Email: </label> {{Dados.email}} </p>
               <p><label> CNPJ:  </label>  {{Dados.cnpj}} </p>
@@ -46,7 +46,7 @@
             <div class = 'form'>
 
               <h2> Característica da Startup </h2> <br>
-              <p><label> Setor de atuação: </label>  {{Dados.setor_de_atuacao}}</p>
+              <p><label > Setor de atuação: </label>  {{Dados.setor_de_atuacao}}</p>
               <p><label> Area de atuação da Startup:  </label>  {{Dados.area_de_atuacao_da_startup}} </p>
               <p><label> Segmento/Área : </label> {{Dados.segmento_area}} </p>
               <p><label> Detalhe da área de atuação:  </label>  {{Dados.detalhes_de_area_de_atuacao}} </p>

@@ -1,14 +1,13 @@
 
 body{
     background: #23262b;
-font: normal 15pt Arial;
+    font: normal 15pt Arial;
     
 }
+#imagem{
 
-header{
-    color: white;
-    text-align: center;
-
+    display: block; 
+    margin: auto;
 }
 
 .form{
@@ -93,3 +92,5 @@ ul {
     padding: 8px 1%;
     width: 60%;
 }
+
+
