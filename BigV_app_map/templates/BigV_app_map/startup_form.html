@@ -7,12 +7,10 @@
 
 {% block conteudo %}
 <div class="container">
-  <!-- <div class="row"> -->
-    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %} 
           <br>
-          <div class = 'form'>
+          <div class = 'form' name = 'Dados Cadastrais'>
           
             <h2> Dados Cadastrais </h2>
               <p><label> Nome: </label>  {{Dados.nome}} </p>
@@ -23,7 +21,7 @@
 
             </div>
             <br>
-            <div class = 'form'>
+            <div class = 'form' name = 'Endereço da Instituição'>
               
               <h2> Endereço da Startup </h2>
               <p><label> CEP:  </label> {{Dados.cep}} </p>
@@ -34,7 +32,7 @@
               
             </div>
             <br>
-            <div class = 'form'>
+            <div class = 'form' name = 'Dados do Representate'>
 
               <h2> Dados do Representante </h2> <br>
               <p><label> Nome do Representante:  </label> {{Dados.nome_representante}} </p>
@@ -43,7 +41,7 @@
               <p><label> Email do Representante:  </label>  {{Dados.email_representante}} </p>
             </div>
             <br>
-            <div class = 'form'>
+            <div class = 'form' name = 'Campo de Abrangência da Instituição Cadastrada'>
 
               <h2> Característica da Startup </h2> <br>
               <p><label > Setor de atuação: </label>  {{Dados.setor_de_atuacao}}</p>
@@ -54,8 +52,9 @@
               <p><label> Tipo de Cliente:  </label>  {{Dados.tipo_de_cliente}} </p>
             </div>
             <br>
-            <div class = 'form'>
+            <div class = 'form' name = 'Sobre Projetos, iniciativas, parceirias e infraestrutura'>
               <h2> Questionário </h2>
+
               <p><label> Possui mercado Global? </label>  {{Dados.possui_mercado_global}} </p>
               <p><label> Possui influência ou interesse militar? </label>  {{Dados.possui_Influencia_ou_interesse_militar}} </p>
               <p><label> Qual estratégia de saída ou idealizada para o negócio? </label>  {{Dados.qual_estrategia_de_saida_ou_idealizada_para_o_negocio}} </p>
@@ -70,17 +69,12 @@
               <p><label> Quais os modelos de receitas se enquadra no perfil da Startup ?</label>  {{Dados.quais_os_modelos_de_receitas_se_enquadra_no_perfil_da_empresa_startup}} </p>                 
               <p><label> Quais programas, iniciativas, movimentos de empreendedorismo e inovação que participa:</label>  {{Dados.quais_programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa}} </p>
               <p><label> Com quais entidades do Ecossistema tem conexão, interação frequente, projetos em parceria, colaboração, que contribuíram e contribuem para as inovações e aperfeiçoamento da empresa ? </label>  {{Dados.com_quais_entidades_do_ecossistema_tem_conexao_interacao_frequente_projetos_em_parceria_colaboracao_que_contribuiram_e_contribuem_para_as_inovacoes_e_aperfeicoamento_da_empresa}} </p>
-              <p><label> Estes parceiros listados acima possuem que esfera ? </label>  {{Dados.estes_parceiros_listados_acima_possuem_que_esfera}} </p>
-               
-    
+              <p><label> Estes parceiros listados acima possuem que esfera ? </label>  {{Dados.estes_parceiros_listados_acima_possuem_que_esfera}} </p>    
             <button type="submit" class= 'botao'> Enviar </button>  
             </div>
           
       
         </form> 
-          
-    <!-- </div> -->
-  <!-- </div> -->
 </div>
 
 {% endblock %}

@@ -29,15 +29,15 @@ class TransacaoForm_Dados_startup(ModelForm):
             'nome':  TextInput(attrs={'placeholder': 'Nome da Startup'}),
             'cnpj':  TextInput(attrs={'placeholder': ' xx.xxx.xxx/xxxx-xx'}),
             'site':  TextInput(attrs={'placeholder': 'http://www.seuwebsite.com'}),
-            'email': TextInput(attrs={'placeholder': 'meuemail@qualquer.com'}),
+            'email': TextInput(attrs={'placeholder': 'meuemail@provedor.com'}),
             'logo':  FileInput(attrs={'class':'label'}),
             #Endereço
-            'cep': TextInput(attrs={'placeholder': 'xxxxx-xxx'}), ####### fazer Auto preenchimento com CEP
+            'cep': TextInput(attrs={'placeholder': 'xxxxx-xxx','autofocus':'autofocus'}), ####### fazer Auto preenchimento com CEP
             
             #dados representante
             'telefone': PhoneNumberPrefixWidget(attrs={'placeholder': 'xxxxxxx-xxxx'}), ## arrumar aqui depois 
             
-            'email_representante': TextInput(attrs={'placeholder': 'meuemail@qualquer.com'}),
+            'email_representante': TextInput(attrs={'placeholder': 'meuemail@provedor.com'}),
             
             
             #caracteristicas da startup
@@ -67,13 +67,17 @@ class TransacaoForm_Dados_empresa(ModelForm):
             
             
             #Endereço institucional 
-            'cep': TextInput(attrs={'placeholder': 'xxxxx-xxx'}), ####### fazer Auto preenchimento com CEP
+            'cep':      TextInput(attrs={'placeholder': 'xxxxx-xxx','autofocus':'autofocus','id':'cep','onblur':'pesquisacep(this.value);'}), ####### fazer Auto preenchimento com CEP
+            'rua':      TextInput(attrs={'id': 'rua'}),
+            'bairro':   TextInput(attrs={'id': 'bairro'}),    
+            'cidade':   TextInput(attrs={'id': 'cidade'}),
+            'estado':   Select(attrs={'id': 'uf'}),
             'site':  TextInput(attrs={'placeholder': 'http://www.seuwebsite.com'}),
-            'email': TextInput(attrs={'placeholder': 'meuemail@qualquer.com'}),
+            'email': TextInput(attrs={'placeholder': 'meuemail@provedor.com'}),
 
             #Dados do Representante
             'telefone': PhoneNumberPrefixWidget(attrs={'placeholder': 'xxxxxxx-xxxx'}), ## arrumar aqui depois 
-            'email_representante': TextInput(attrs={'placeholder': 'meuemail@qualquer.com'}),
+            'email_representante': TextInput(attrs={'placeholder': 'meuemail@provedor.com'}),
             
             #Campo de Abrangência da Instituição Cadastrada
             'em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra' : CheckboxSelectMultiple(),

@@ -7,12 +7,10 @@
 
 {% block conteudo %}
 <div class="container">
-<!-- <div class="row"> -->
-    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> -->
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %} 
         <br>
-        <div class = 'form'>
+        <div class = 'form' name = 'Dados Cadastrais'>
             <h2> Dados Cadastrais </h2> <br>
                 <p><label> Nome do Ator/Entidade</label> {{Dados2.nome}}</p>
                 <p><label> {{Dados2.pessoa}}</label></p>
@@ -20,7 +18,7 @@
 
         </div>
         <br>
-        <div class = 'form'>
+        <div class = 'form' name = 'Endereço da Startup'>
             
             <h2> Endereço Institucional </h2> <br>
                 <p><label> CEP:  </label>{{Dados2.cep}}</p>
@@ -33,7 +31,7 @@
 
         </div>
         <br>
-        <div class = 'form'>
+        <div class = 'form' name = 'Dados do Representate'>
             <h2>Dados do Representante </h2>
             <br>
                 <p><label > Nome do Representante: </label>{{Dados2.nome_representante}}</p>
@@ -42,7 +40,7 @@
                 <p><label>Email do Representante: </label>{{Dados2.email_representante}}</p>
         </div>
         <br>
-        <div class = 'form'>
+        <div class = 'form' name = 'Característica da Startup'>
             <h2>Campo de Abrangência da Instituição Cadastrada</h2>
             <br>
                 <p><label> Em qual deste itens abaixo, seu cadastro se enquadra:</label>{{Dados2.em_qual_destes_itens_abaixo_seu_cadastro_se_enquadra}}</p>
@@ -62,7 +60,7 @@
             <p><label> Segmento </label>{{Dados2.segmento}}</p>
         </div>
         <br>
-        <div class = 'form'>
+        <div class = 'form' name = 'Questionário'>
             <h2> Sobre Projetos, iniciativas, parceirias e infraestrutura</h2> <br>
                 <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que executa:</label>{{Dados2.programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_executa}}</p>
                 <p><label> Porgramas iniciativas,movimentos de empreendedorismo e inovação que participa:</label> {{Dados2.programas_iniciativas_movimentos_de_empreendedorismo_e_inovacao_que_participa}}</p>
@@ -71,6 +69,8 @@
             <button type="submit" class= 'botao'> Enviar </button>  
         </div>
     </form>
+
+
 
         <script>
             // valor pega no form com o onchange no dict, respeitando os id no html e form django
@@ -141,6 +141,7 @@
                 }
             }
         </script>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 </div>
 
 {% endblock %}
