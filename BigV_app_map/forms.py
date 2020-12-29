@@ -32,7 +32,7 @@ class TransacaoForm_Dados_startup(ModelForm):
             'email': TextInput(attrs={'placeholder': 'meuemail@provedor.com'}),
             'logo':  FileInput(attrs={'class':'label'}),
             #Endereço
-            'cep': TextInput(attrs={'placeholder': 'xxxxx-xxx','autofocus':'autofocus'}), ####### fazer Auto preenchimento com CEP
+            'cep': TextInput(attrs={'placeholder': 'xxxxx-xxx'}), ####### fazer Auto preenchimento com CEP
             
             #dados representante
             'telefone': PhoneNumberPrefixWidget(attrs={'placeholder': 'xxxxxxx-xxxx'}), ## arrumar aqui depois 
@@ -67,7 +67,7 @@ class TransacaoForm_Dados_empresa(ModelForm):
             
             
             #Endereço institucional 
-            'cep':      TextInput(attrs={'placeholder': 'xxxxx-xxx','autofocus':'autofocus','id':'cep','onblur':'pesquisacep(this.value);'}), ####### fazer Auto preenchimento com CEP
+            'cep':      TextInput(attrs={'placeholder': 'xxxxx-xxx','id':'cep','onblur':'pesquisacep(this.value);'}), ####### fazer Auto preenchimento com CEP
             'rua':      TextInput(attrs={'id': 'rua'}),
             'bairro':   TextInput(attrs={'id': 'bairro'}),    
             'cidade':   TextInput(attrs={'id': 'cidade'}),
