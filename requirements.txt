@@ -3,7 +3,7 @@ asgiref==3.2.10
 Babel==2.8.0
 colorama==0.4.4
 distlib==0.3.1
-Django==3.1.4
+Django==3.1.10
 django-localflavor==3.0.1
 django-multiselectfield==0.1.12
 django-phonenumber-field==5.0.0
